@@ -1,0 +1,29 @@
+/* ! 여기서 '*' -> 모든 것을 의미 */
+* {
+  margin: 0;
+  padding: 0;
+  /* ! 원래 css 기본 설정은 padding값을 먹이면 설정했던 width 크기도 (+padding값) 변함 -> border-box : padding 먹여도 width값이 변하지 않음 */
+  box-sizing: border-box;
+}
+
+.section {
+  /* background-color: red; */
+}
+
+.container {
+  /* ! 변수 사용할 때, '--(이름)' */
+  --pInline-val: 24px;
+  /* background-color: green; */
+  max-width: calc(
+    1200px + 2 * var(--pInline-val)
+  );
+  /* ! 'margin-inline: auto'는 중앙정렬 */
+  margin-inline: auto;
+  padding-inline: var(--pInline-val);
+}
+
+.wrapper {
+  /* background-color: blue; */
+  /* ! block=상하 */
+  padding-block: 32px;
+}
