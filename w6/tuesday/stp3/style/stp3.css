@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 패딩값을 주더라도 container의 width가 변하지 않게 하는 설정값임 */
+  box-sizing: border-box;
+}
+
+.section {
+  /* background-color: red; */
+}
+
+.container {
+  /* background-color: green; */
+  --variableName: 24px;
+  max-width: calc(1200px + 2 * var(--variableName));
+  margin-inline: auto;
+  padding-inline: var(--variableName);
+}
+
+.wrapper {
+  /* background-color: blue; */
+  padding-block: 64px;
+}
+
+.nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* 나중에 적힌 것이 우선순위긴 하나, 
+  이 경우는 순서에 상관없이 "select specificity(명시도)"에 따라 적용되는 우선순위가 바뀐다. */
+  padding-block: 12px;
+}
+
+.nav__meunWrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.nav {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+}
+
+.button {
+  background-color: slateblue;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
