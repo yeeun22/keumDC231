@@ -77,7 +77,7 @@
       border-left: 1px solid #000;
     }
   }
-  h3 {
+  h4 {
     margin-bottom: 1rem;
     font-size: 0.875rem;
   }
@@ -96,23 +96,60 @@ h1 {
   margin-bottom: 12px;
 }
 
+.button {
+  margin-top: 48px;
+  font-size: 18px;
+  width: fit-content;
+  background-color: white;
+  padding: 8px 16px;
+  // border-radius: 8px;
+  color: rgb(255, 42, 0);
+  font-weight: 700;
+  text-align: center;
+}
+
 #hero1 {
+  padding-bottom: 200px;
+  .mainWrapper {
+    background-color: black;
+    color: white;
+    .main {
+      &__text {
+        padding: 48px;
+        font-size: 20px;
+        font-weight: 300;
+        // min-width: 400px;
+        max-width: 45ch;
+        line-height: 170%;
+        h3 {
+          font-size: 28px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+    align-items: center;
+  }
   padding-top: 64px;
   h2 {
     text-align: center;
     font-size: 28px;
     font-weight: 350;
+    margin-bottom: 100px;
   }
 }
 
 #hero2 {
   border-top: 1px solid #000;
-  padding-block: 64px;
+  padding-top: 64px;
+  padding-bottom: 200px;
   background-color: rgb(243, 243, 242);
 
   .main {
     &__text {
-      padding-top: 48px;
+      padding-top: 100px;
       padding-bottom: 32px;
       h2 {
         text-align: left;
@@ -125,6 +162,7 @@ h1 {
     &__mediaWrapper {
       display: flex;
       margin-inline: auto;
+      gap: 8px;
     }
     &__media {
       // max-width: 400px;
