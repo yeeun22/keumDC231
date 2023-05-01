@@ -13,11 +13,77 @@
 .banner {
   background-color: rgb(201, 201, 201);
   font-size: 13px;
+  border-bottom: 1px solid #000;
 
   .wrapper {
     padding-block: 5px;
-    padding-inline: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  }
+}
+
+.topNav {
+  border-bottom: 1px solid #000;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menuWrapper {
+    padding-block: 1rem;
+    display: flex;
+    gap: 30px;
+  }
+  &__menu {
+    font-size: 1.25rem;
+  }
+}
+
+.bottomNav {
+  background-color: black;
+  color: white;
+  .wrapper {
+    // display: flex;
+    // align-items: center;
+    // gap: 2rem;
+  }
+  &__logo {
+    padding-top: 10px;
+  }
+  &__menuWrapper {
+    color: rgb(197, 197, 197);
+    padding-block: 0.625rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.footer {
+  font-size: 12px;
+  border-top: 1px solid #000;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    // gap: 1.5rem;
+    .column {
+      padding: 48px 0px 48px 48px;
+      border-left: 1px solid #000;
+    }
+  }
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  &__extlinkWrapper {
+    margin-top: 24px;
+    display: flex;
+    gap: 20px;
   }
 }
