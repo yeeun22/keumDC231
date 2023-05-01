@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  $padding-inline-value: 24px;
+  max-width: 1200px + 2 * $padding-inline-value;
+  margin-inline: auto;
+  padding-inline: $padding-inline-value;
+}
+
+.banner {
+  background-color: rgb(201, 201, 201);
+  font-size: 13px;
+  border-bottom: 1px solid #000;
+
+  .wrapper {
+    padding-block: 5px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.topNav {
+  border-bottom: 1px solid #000;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menuWrapper {
+    padding-block: 1rem;
+    display: flex;
+    gap: 30px;
+  }
+  &__menu {
+    font-size: 1.25rem;
+  }
+}
+
+.bottomNav {
+  background-color: black;
+  color: white;
+  .wrapper {
+    // display: flex;
+    // align-items: center;
+    // gap: 2rem;
+  }
+  &__logo {
+    padding-top: 10px;
+  }
+  &__menuWrapper {
+    color: rgb(197, 197, 197);
+    padding-block: 0.625rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.footer {
+  font-size: 12px;
+  border-top: 1px solid #000;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    // gap: 1.5rem;
+    .column {
+      padding: 48px 0px 48px 48px;
+      border-left: 1px solid #000;
+    }
+  }
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  &__extlinkWrapper {
+    margin-top: 24px;
+    display: flex;
+    gap: 20px;
+  }
+}
+
+#hero2 {
+  border-top: 1px solid #000;
+  padding-block: 64px;
+  background-color: rgb(233, 233, 230);
+
+  h1 {
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 64px;
+  }
+  .main {
+    &__text {
+      padding-top: 12px;
+      padding-bottom: 32px;
+      h2 {
+        font-size: 28px;
+        font-weight: 350;
+        max-width: 20ch;
+        line-height: 150%;
+      }
+    }
+    &__mediaWrapper {
+      display: flex;
+      margin-inline: auto;
+    }
+    &__media {
+      // max-width: 400px;
+      // max-height: 600px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.media--text {
+  padding-top: 12px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.media--date {
+  padding-top: 8px;
+  font-weight: 400;
+  font-size: 20px;
+  color: gray;
+}
