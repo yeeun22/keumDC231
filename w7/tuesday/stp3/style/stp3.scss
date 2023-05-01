@@ -129,6 +129,31 @@
     max-width: 40ch;
     margin-bottom: 24px;
   }
+  @media (width < 53.125rem) {
+    .wrapper {
+      display: block;
+      text-align: center;
+      p {
+        margin-inline: auto;
+      }
+    }
+    .main {
+      // 내가 임의로 넣음
+      &__media {
+        max-width: 470px;
+        margin-inline: auto;
+      }
+      &__text {
+        margin-bottom: 32px;
+        &__buttonWrapper {
+          margin-inline: auto;
+          flex-direction: column;
+          align-items: center;
+          gap: 0;
+        }
+      }
+    }
+  }
 }
 
 .footer {

@@ -70,7 +70,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 #hero1 {
@@ -122,6 +122,28 @@
   max-width: 40ch;
   margin-bottom: 24px;
 }
+@media (width < 53.125rem) {
+  #hero2 .wrapper {
+    display: block;
+    text-align: center;
+  }
+  #hero2 .wrapper p {
+    margin-inline: auto;
+  }
+  #hero2 .main__media {
+    max-width: 470px;
+    margin-inline: auto;
+  }
+  #hero2 .main__text {
+    margin-bottom: 32px;
+  }
+  #hero2 .main__text__buttonWrapper {
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
 
 .footer {
   background-color: gray;
@@ -163,7 +185,7 @@
   margin-bottom: 0.5rem;
 }
 .footer .column:first-of-type {
-  grid-row: 1 / span 2;
+  grid-row: 1/span 2;
 }
 @container footer (width < 44.375rem) {
   .footer .wrapper {
