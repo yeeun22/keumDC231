@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1248px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.banner {
+  background-color: rgb(201, 201, 201);
+  font-size: 13px;
+}
+.banner .wrapper {
+  padding-block: 5px;
+  padding-inline: 100px;
+  display: flex;
+  justify-content: space-around;
+}
