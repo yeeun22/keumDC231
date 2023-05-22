@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>W10 - stp3</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+    <script>
+      let a = 1;
+      console.log(a); // 1
+      a = 2;
+      console.log(a); // 2
+      a = a + 1;
+      console.log(a); // 3
+      a++;
+      console.log(a); // 4
+      a += 1;
+      console.log(a); // 5
+      let txt = "글자";
+      console.log(txt); // 글자
+      txt += 1;
+      console.log(txt); // 글자1
+      txt = txt + 1;
+      console.log(txt); // 글자11
+      txt = txt + "텍스트";
+      console.log(txt); // 글자11텍스트
+      // txt++; // 이건 안된다. (들어있는게 숫자가 아니라서)
+      let numTxt = "1";
+      console.log(numTxt); // 1
+      numTxt++; // 되는데.. 되면 안되는건데.. 되서 문제임 (js의 장점이자 단점)
+      console.log(numTxt); // 2
+      a = a - 1;
+      console.log(a); // 4 (전까지 a =5 였음)
+      a = a * 10;
+      console.log(a); // 40
+      a--;
+      console.log(a); // 39
+      a /= 3;
+      console.log(a); // 13
+    </script>
+  </head>
+  <body>
+    <h1>뭐라도 끄적끄적</h1>
+  </body>
+</html>
