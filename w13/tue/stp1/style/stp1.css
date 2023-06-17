@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: calc(80ch + 2rem);
+  margin-inline: auto;
+  padding-inline: 2rem;
+  min-height: max(50dvh, 25rem);
+}
+
+header {
+  text-align: center;
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
+.section:nth-of-type(odd) {
+  background-color: cadetblue;
+}
