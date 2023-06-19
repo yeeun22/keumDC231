@@ -1,0 +1,9 @@
+:root {
+  --bg: #000000;
+  --bgVariant: #0f66f1;
+  --txt: #e4e1e6;
+  --surface-transparent: #fff3ff50;
+  --surface: Transparency;
+  --onSurface: #cac5ca;
+  --accent: #ff00bb;
+}
