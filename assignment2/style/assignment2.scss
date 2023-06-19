@@ -1,4 +1,5 @@
 @import "theme.dark.css" (prefers-color-scheme: dark);
+@import "theme.light.css" (prefers-color-scheme: light);
 
 $min-height: 4rem;
 $wrapper-padding-inline: 2rem;
@@ -11,6 +12,7 @@ $surface-transparent: var(--surface-transparent);
 $surface: var(--surface);
 $onSurface: var(--onSurface);
 $accent: var(--accent);
+$txtShadow: var(--txtShadow);
 
 *,
 *::before,
@@ -34,7 +36,7 @@ body {
   // font-family: 'Diphylleia', serif;
   font-family: "Noto Serif KR", serif;
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .wrapper {
@@ -51,9 +53,47 @@ body {
 header {
   margin-block: 4rem;
   h1 {
+    width: fit-content;
     margin-block: 0.5rem;
+    transition: font-size 400ms ease-in-out;
     font-size: 3.5rem;
     font-weight: 400;
+  }
+  #h1-1 {
+    text-shadow: 0px 0px 1rem white;
+    &:hover {
+      font-size: 4rem;
+      text-shadow: 0px 0px 1rem aqua;
+      color: aqua;
+    }
+  }
+  #h1-2 {
+    text-shadow: 0px 0px 1rem white;
+    &:hover {
+      font-size: 4rem;
+      text-shadow: 0px 0px 1rem deeppink;
+      color: deeppink;
+    }
+  }
+  #h1-3 {
+    text-shadow: 0px 0px 1rem white;
+    &:hover {
+      font-size: 4rem;
+      text-shadow: 0px 0px 1rem forestgreen;
+      color: forestgreen;
+    }
+  }
+
+  #h1-4 {
+    font-size: 2.5rem;
+    color: gray;
+    &:hover {
+      text-shadow: 0px 0px 1rem gray;
+    }
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 
@@ -72,6 +112,23 @@ main {
   z-index: 1;
   grid-column: 1 / span 2;
   grid-row: 1;
+
+  h2 {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-decoration: overline;
+    text-decoration-style: dotted;
+    text-decoration-color: rgba($color: #ffffff, $alpha: 0.5);
+    text-decoration-thickness: 1rem;
+  }
+
+  .txtWrapper {
+    margin-block: 1.5rem;
+    margin-right: 2rem;
+    padding-inline: 2rem;
+    box-shadow: 1rem 1rem 1rem 1rem $txtShadow;
+  }
 }
 
 aside {
@@ -81,13 +138,13 @@ aside {
   grid-column: 1;
   grid-row: 1;
   width: fit-content;
-  height: max(50dvh, $min-height);
+  height: max(100dvh, $min-height);
   padding-inline: 1.5rem;
   border-radius: 0 2rem 2rem 0;
   background-color: $surface-transparent;
   font-weight: 800;
   font-size: 0.875rem;
-  backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.5rem);
 
   ol {
     display: flex;
@@ -100,12 +157,27 @@ aside {
     list-style: none;
 
     li {
+      border: solid #ffffff;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 999px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: $onSurface;
-
       font-weight: 600;
+
+      &:hover {
+        border: solid $accent;
+        color: $accent;
+        font-weight: 800;
+      }
+
+      &.pressed {
+        border: solid $accent;
+        color: $accent;
+        font-weight: 800;
+      }
     }
   }
 
@@ -131,5 +203,47 @@ aside {
     transform-origin: left;
     background-color: $accent;
     inset: 0;
+  }
+}
+
+@media (width < 67.5rem) {
+  .stickyWrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+  main {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  aside {
+    top: $progressBar-height;
+    left: 1rem;
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    height: fit-content;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    // overflow-x: scroll;
+    // scrollbar-width: none;
+    // -ms-overflow-style: none;
+    // &::-webkit-scrollbar {
+    // display: none;
+    // }
+
+    border-radius: 0 0 2rem 2rem;
+
+    ol {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-evenly;
+      // gap: 3rem;
+
+      a:first-of-type li {
+        margin-left: 4px;
+      }
+    }
   }
 }

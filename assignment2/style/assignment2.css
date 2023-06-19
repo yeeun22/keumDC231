@@ -1,4 +1,5 @@
 @import "theme.dark.css" (prefers-color-scheme: dark);
+@import "theme.light.css" (prefers-color-scheme: light);
 *,
 *::before,
 *::after {
@@ -20,7 +21,7 @@ body {
   color: var(--txt);
   font-family: "Noto Serif KR", serif;
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .wrapper {
@@ -38,9 +39,47 @@ header {
   margin-block: 4rem;
 }
 header h1 {
+  width: -moz-fit-content;
+  width: fit-content;
   margin-block: 0.5rem;
+  transition: font-size 400ms ease-in-out;
   font-size: 3.5rem;
   font-weight: 400;
+}
+header #h1-1 {
+  text-shadow: 0px 0px 1rem white;
+}
+header #h1-1:hover {
+  font-size: 4rem;
+  text-shadow: 0px 0px 1rem aqua;
+  color: aqua;
+}
+header #h1-2 {
+  text-shadow: 0px 0px 1rem white;
+}
+header #h1-2:hover {
+  font-size: 4rem;
+  text-shadow: 0px 0px 1rem deeppink;
+  color: deeppink;
+}
+header #h1-3 {
+  text-shadow: 0px 0px 1rem white;
+}
+header #h1-3:hover {
+  font-size: 4rem;
+  text-shadow: 0px 0px 1rem forestgreen;
+  color: forestgreen;
+}
+header #h1-4 {
+  font-size: 2.5rem;
+  color: gray;
+}
+header #h1-4:hover {
+  text-shadow: 0px 0px 1rem gray;
+}
+header a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 section:nth-of-type(odd) {
@@ -59,6 +98,21 @@ main {
   grid-column: 1/span 2;
   grid-row: 1;
 }
+main h2 {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-decoration: overline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-decoration-thickness: 1rem;
+}
+main .txtWrapper {
+  margin-block: 1.5rem;
+  margin-right: 2rem;
+  padding-inline: 2rem;
+  box-shadow: 1rem 1rem 1rem 1rem var(--txtShadow);
+}
 
 aside {
   position: sticky;
@@ -68,14 +122,14 @@ aside {
   grid-row: 1;
   width: -moz-fit-content;
   width: fit-content;
-  height: max(50dvh, 4rem);
+  height: max(100dvh, 4rem);
   padding-inline: 1.5rem;
   border-radius: 0 2rem 2rem 0;
   background-color: var(--surface-transparent);
   font-weight: 800;
   font-size: 0.875rem;
-  -webkit-backdrop-filter: blur(0.25rem);
-          backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
 }
 aside ol {
   display: flex;
@@ -89,11 +143,25 @@ aside ol {
   list-style: none;
 }
 aside ol li {
+  border: solid #ffffff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--onSurface);
   font-weight: 600;
+}
+aside ol li:hover {
+  border: solid var(--accent);
+  color: var(--accent);
+  font-weight: 800;
+}
+aside ol li.pressed {
+  border: solid var(--accent);
+  color: var(--accent);
+  font-weight: 800;
 }
 aside a {
   text-decoration: none;
@@ -116,4 +184,36 @@ aside a {
   transform-origin: left;
   background-color: var(--accent);
   inset: 0;
+}
+
+@media (width < 67.5rem) {
+  .stickyWrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+  main {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  aside {
+    top: 0.25rem;
+    left: 1rem;
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    border-radius: 0 0 2rem 2rem;
+  }
+  aside ol {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  aside ol a:first-of-type li {
+    margin-left: 4px;
+  }
 }
