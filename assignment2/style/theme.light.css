@@ -1,9 +1,14 @@
 :root {
   --bg: #ffffff;
-  --bgVariant: #0f66f1;
-  --txt: #562c2c;
+  --bgVariant: #191b26;
+  --txt: #f700ff;
   --surface-transparent: Transparency;
-  --surface: Transparency;
-  --onSurface: #cac5ca;
-  --accent: #ff00bb;
+  --surface: #ffffff;
+  --onSurface: #a4e0e4;
+  --accent: #00e0e4;
+  --txtShadow: #e4e1e6;
+  --h1Color1: aqua;
+  --h1Color2: deeppink;
+  --h1Color3: forestgreen;
+  --borderSolid: #a4e0e4;
 }

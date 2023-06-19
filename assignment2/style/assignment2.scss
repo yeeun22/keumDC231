@@ -16,6 +16,7 @@ $txtShadow: var(--txtShadow);
 $h1Color1: var(--h1Color1);
 $h1Color2: var(--h1Color2);
 $h1Color3: var(--h1Color3);
+$borderSolid: var(--borderSolid);
 
 *,
 *::before,
@@ -225,7 +226,7 @@ aside {
     list-style: none;
 
     li {
-      border: solid #ffffff;
+      border: solid $borderSolid;
       width: 4rem;
       height: 4rem;
       border-radius: 999px;

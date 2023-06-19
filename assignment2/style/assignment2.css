@@ -188,7 +188,7 @@ aside ol {
   list-style: none;
 }
 aside ol li {
-  border: solid #ffffff;
+  border: solid var(--borderSolid);
   width: 4rem;
   height: 4rem;
   border-radius: 999px;
