@@ -13,6 +13,9 @@ $surface: var(--surface);
 $onSurface: var(--onSurface);
 $accent: var(--accent);
 $txtShadow: var(--txtShadow);
+$h1Color1: var(--h1Color1);
+$h1Color2: var(--h1Color2);
+$h1Color3: var(--h1Color3);
 
 *,
 *::before,
@@ -50,37 +53,98 @@ body {
   word-break: keep-all;
 }
 
+#section1 {
+  .animTarget {
+    opacity: 0%;
+    transform: translateY(-1rem);
+    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  }
+  &.triggered {
+    .animTarget {
+      opacity: 100%;
+      transform: translateY(1rem);
+      color: $txt;
+    }
+  }
+}
+
+#section2 {
+  .animTarget {
+    opacity: 0%;
+    transform: translateY(-1rem);
+    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  }
+  &.triggered {
+    .animTarget {
+      opacity: 100%;
+      transform: translateY(1rem);
+      color: $txt;
+    }
+  }
+}
+
+#section3 {
+  .animTarget {
+    opacity: 0%;
+    transform: translateY(-1rem);
+    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  }
+  &.triggered {
+    .animTarget {
+      opacity: 100%;
+      transform: translateY(1rem);
+      color: $txt;
+    }
+  }
+}
+
+#section4 {
+  .animTarget {
+    opacity: 0%;
+    transform: translateY(-1rem);
+    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  }
+  &.triggered {
+    .animTarget {
+      opacity: 100%;
+      transform: translateY(1rem);
+      color: $txt;
+    }
+  }
+}
+
 header {
   margin-block: 4rem;
   h1 {
     width: fit-content;
     margin-block: 0.5rem;
-    transition: font-size 400ms ease-in-out;
-    font-size: 3.5rem;
+    transition: font-size 150ms ease-in-out;
+    font-size: 5rem;
+    line-height: 1.5;
     font-weight: 400;
   }
   #h1-1 {
-    text-shadow: 0px 0px 1rem white;
+    text-shadow: 0px 0px 1rem $txt;
     &:hover {
-      font-size: 4rem;
-      text-shadow: 0px 0px 1rem aqua;
-      color: aqua;
+      font-size: 6rem;
+      text-shadow: 0px 0px 1rem $h1Color1;
+      color: $h1Color1;
     }
   }
   #h1-2 {
-    text-shadow: 0px 0px 1rem white;
+    text-shadow: 0px 0px 1rem $txt;
     &:hover {
-      font-size: 4rem;
-      text-shadow: 0px 0px 1rem deeppink;
-      color: deeppink;
+      font-size: 6rem;
+      text-shadow: 0px 0px 1rem $h1Color2;
+      color: $h1Color2;
     }
   }
   #h1-3 {
-    text-shadow: 0px 0px 1rem white;
+    text-shadow: 0px 0px 1rem $txt;
     &:hover {
-      font-size: 4rem;
-      text-shadow: 0px 0px 1rem forestgreen;
-      color: forestgreen;
+      font-size: 6rem;
+      text-shadow: 0px 0px 1rem $h1Color3;
+      color: $h1Color3;
     }
   }
 
@@ -97,9 +161,9 @@ header {
   }
 }
 
-section:nth-of-type(odd) {
-  background-color: $bgVariant;
-}
+// section:nth-of-type(odd) {
+//   background-color: $bgVariant;
+// }
 
 .stickyWrapper {
   display: grid;
@@ -131,9 +195,13 @@ main {
   }
 }
 
+.animTrigger {
+  position: relative;
+}
+
 aside {
   position: sticky;
-  z-index: 3;
+  z-index: 2;
   top: 2rem;
   grid-column: 1;
   grid-row: 1;
@@ -189,7 +257,7 @@ aside {
 
 .progressBar {
   position: sticky;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   grid-column: 1 / span 2;
   grid-row: 1;
@@ -203,6 +271,12 @@ aside {
     transform-origin: left;
     background-color: $accent;
     inset: 0;
+  }
+}
+
+footer {
+  .wrapper {
+    min-height: max(100dvh, $min-height);
   }
 }
 

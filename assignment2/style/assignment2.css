@@ -35,6 +35,50 @@ body {
   word-break: keep-all;
 }
 
+#section1 .animTarget {
+  opacity: 0%;
+  transform: translateY(-1rem);
+  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+}
+#section1.triggered .animTarget {
+  opacity: 100%;
+  transform: translateY(1rem);
+  color: var(--txt);
+}
+
+#section2 .animTarget {
+  opacity: 0%;
+  transform: translateY(-1rem);
+  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+}
+#section2.triggered .animTarget {
+  opacity: 100%;
+  transform: translateY(1rem);
+  color: var(--txt);
+}
+
+#section3 .animTarget {
+  opacity: 0%;
+  transform: translateY(-1rem);
+  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+}
+#section3.triggered .animTarget {
+  opacity: 100%;
+  transform: translateY(1rem);
+  color: var(--txt);
+}
+
+#section4 .animTarget {
+  opacity: 0%;
+  transform: translateY(-1rem);
+  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+}
+#section4.triggered .animTarget {
+  opacity: 100%;
+  transform: translateY(1rem);
+  color: var(--txt);
+}
+
 header {
   margin-block: 4rem;
 }
@@ -42,33 +86,34 @@ header h1 {
   width: -moz-fit-content;
   width: fit-content;
   margin-block: 0.5rem;
-  transition: font-size 400ms ease-in-out;
-  font-size: 3.5rem;
+  transition: font-size 150ms ease-in-out;
+  font-size: 5rem;
+  line-height: 1.5;
   font-weight: 400;
 }
 header #h1-1 {
-  text-shadow: 0px 0px 1rem white;
+  text-shadow: 0px 0px 1rem var(--txt);
 }
 header #h1-1:hover {
-  font-size: 4rem;
-  text-shadow: 0px 0px 1rem aqua;
-  color: aqua;
+  font-size: 6rem;
+  text-shadow: 0px 0px 1rem var(--h1Color1);
+  color: var(--h1Color1);
 }
 header #h1-2 {
-  text-shadow: 0px 0px 1rem white;
+  text-shadow: 0px 0px 1rem var(--txt);
 }
 header #h1-2:hover {
-  font-size: 4rem;
-  text-shadow: 0px 0px 1rem deeppink;
-  color: deeppink;
+  font-size: 6rem;
+  text-shadow: 0px 0px 1rem var(--h1Color2);
+  color: var(--h1Color2);
 }
 header #h1-3 {
-  text-shadow: 0px 0px 1rem white;
+  text-shadow: 0px 0px 1rem var(--txt);
 }
 header #h1-3:hover {
-  font-size: 4rem;
-  text-shadow: 0px 0px 1rem forestgreen;
-  color: forestgreen;
+  font-size: 6rem;
+  text-shadow: 0px 0px 1rem var(--h1Color3);
+  color: var(--h1Color3);
 }
 header #h1-4 {
   font-size: 2.5rem;
@@ -80,10 +125,6 @@ header #h1-4:hover {
 header a {
   text-decoration: none;
   cursor: pointer;
-}
-
-section:nth-of-type(odd) {
-  background-color: var(--bgVariant);
 }
 
 .stickyWrapper {
@@ -114,9 +155,13 @@ main .txtWrapper {
   box-shadow: 1rem 1rem 1rem 1rem var(--txtShadow);
 }
 
+.animTrigger {
+  position: relative;
+}
+
 aside {
   position: sticky;
-  z-index: 3;
+  z-index: 2;
   top: 2rem;
   grid-column: 1;
   grid-row: 1;
@@ -170,7 +215,7 @@ aside a {
 
 .progressBar {
   position: sticky;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   grid-column: 1/span 2;
   grid-row: 1;
@@ -184,6 +229,10 @@ aside a {
   transform-origin: left;
   background-color: var(--accent);
   inset: 0;
+}
+
+footer .wrapper {
+  min-height: max(100dvh, 4rem);
 }
 
 @media (width < 67.5rem) {
