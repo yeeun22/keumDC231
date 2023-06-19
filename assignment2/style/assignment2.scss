@@ -280,16 +280,6 @@ footer {
   }
 }
 
-img {
-  transition: transform 800ms ease-in-out, filter 1200ms ease-in-out;
-  transform: scale(0.5);
-  filter: blur(1rem);
-  &:hover {
-    transform: scale(0.8);
-    filter: none;
-  }
-}
-
 @media (width < 67.5rem) {
   .stickyWrapper {
     grid-template-columns: 1fr;
