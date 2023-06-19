@@ -38,7 +38,7 @@ body {
 #section1 .animTarget {
   opacity: 0%;
   transform: translateY(-1rem);
-  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
 }
 #section1.triggered .animTarget {
   opacity: 100%;
@@ -49,7 +49,7 @@ body {
 #section2 .animTarget {
   opacity: 0%;
   transform: translateY(-1rem);
-  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
 }
 #section2.triggered .animTarget {
   opacity: 100%;
@@ -60,7 +60,7 @@ body {
 #section3 .animTarget {
   opacity: 0%;
   transform: translateY(-1rem);
-  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
 }
 #section3.triggered .animTarget {
   opacity: 100%;
@@ -71,7 +71,7 @@ body {
 #section4 .animTarget {
   opacity: 0%;
   transform: translateY(-1rem);
-  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+  transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
 }
 #section4.triggered .animTarget {
   opacity: 100%;
@@ -233,6 +233,16 @@ aside a {
 
 footer .wrapper {
   min-height: max(100dvh, 4rem);
+}
+
+img {
+  transition: transform 800ms ease-in-out, filter 1200ms ease-in-out;
+  transform: scale(0.5);
+  filter: blur(1rem);
+}
+img:hover {
+  transform: scale(0.8);
+  filter: none;
 }
 
 @media (width < 67.5rem) {

@@ -57,7 +57,7 @@ body {
   .animTarget {
     opacity: 0%;
     transform: translateY(-1rem);
-    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+    transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
   }
   &.triggered {
     .animTarget {
@@ -72,7 +72,7 @@ body {
   .animTarget {
     opacity: 0%;
     transform: translateY(-1rem);
-    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+    transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
   }
   &.triggered {
     .animTarget {
@@ -87,7 +87,7 @@ body {
   .animTarget {
     opacity: 0%;
     transform: translateY(-1rem);
-    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+    transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
   }
   &.triggered {
     .animTarget {
@@ -102,7 +102,7 @@ body {
   .animTarget {
     opacity: 0%;
     transform: translateY(-1rem);
-    transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+    transition: opacity 400ms ease-in-out, transform 600ms ease-in-out;
   }
   &.triggered {
     .animTarget {
@@ -277,6 +277,16 @@ aside {
 footer {
   .wrapper {
     min-height: max(100dvh, $min-height);
+  }
+}
+
+img {
+  transition: transform 800ms ease-in-out, filter 1200ms ease-in-out;
+  transform: scale(0.5);
+  filter: blur(1rem);
+  &:hover {
+    transform: scale(0.8);
+    filter: none;
   }
 }
 
