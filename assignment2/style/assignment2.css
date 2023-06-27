@@ -89,7 +89,10 @@ header h1 {
   transition: font-size 150ms ease-in-out;
   font-size: 5rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 header #h1-1 {
   text-shadow: 0px 0px 1rem var(--txt);
@@ -118,6 +121,7 @@ header #h1-3:hover {
 header #h1-4 {
   font-size: 2.5rem;
   color: gray;
+  cursor: pointer;
 }
 header #h1-4:hover {
   text-shadow: 0px 0px 1rem gray;
@@ -140,13 +144,14 @@ main {
   grid-row: 1;
 }
 main h2 {
+  font-family: "Nanum Myeongjo", serif;
   margin-top: 4rem;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: overline;
   text-decoration-style: dotted;
   text-decoration-color: rgba(255, 255, 255, 0.5);
-  text-decoration-thickness: 1rem;
+  text-decoration-thickness: 0.8rem;
 }
 main .txtWrapper {
   margin-block: 1.5rem;
@@ -265,4 +270,31 @@ footer .wrapper {
   aside ol a:first-of-type li {
     margin-left: 4px;
   }
+}
+#img1 {
+  transition: all 800ms ease-in-out;
+  transform: scale(0.7);
+  filter: blur(0.5rem);
+  opacity: 0.3;
+}
+#img1:hover {
+  transform: scale(0.8);
+  filter: blur(0);
+  opacity: 1;
+}
+
+#txt1 {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+}
+#txt1 p {
+  padding: 0;
+  margin: 0.25rem;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+#txt1 p a {
+  color: #ffffff;
 }

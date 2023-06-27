@@ -37,7 +37,8 @@ body {
   margin: 0;
   background-color: $bg;
   color: $txt;
-  // font-family: 'Diphylleia', serif;
+  // font-family: "Nanum Myeongjo", serif;
+  // font-family: "Gowun Batang", serif;
   font-family: "Noto Serif KR", serif;
   font-size: 1.125rem;
   line-height: 1.7;
@@ -122,7 +123,8 @@ header {
     transition: font-size 150ms ease-in-out;
     font-size: 5rem;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 300;
+    user-select: none;
   }
   #h1-1 {
     text-shadow: 0px 0px 1rem $txt;
@@ -152,6 +154,7 @@ header {
   #h1-4 {
     font-size: 2.5rem;
     color: gray;
+    cursor: pointer;
     &:hover {
       text-shadow: 0px 0px 1rem gray;
     }
@@ -179,13 +182,14 @@ main {
   grid-row: 1;
 
   h2 {
+    font-family: "Nanum Myeongjo", serif;
     margin-top: 4rem;
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 300;
     text-decoration: overline;
     text-decoration-style: dotted;
     text-decoration-color: rgba($color: #ffffff, $alpha: 0.5);
-    text-decoration-thickness: 1rem;
+    text-decoration-thickness: 0.8rem;
   }
 
   .txtWrapper {
@@ -319,6 +323,37 @@ footer {
       a:first-of-type li {
         margin-left: 4px;
       }
+    }
+  }
+}
+
+#img1 {
+  transition: all 800ms ease-in-out;
+  transform: scale(0.7);
+  filter: blur(0.5rem);
+  opacity: 0.3;
+  &:hover {
+    transform: scale(0.8);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+#txt1 {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  // transform: translate(-50%, -50%);
+
+  p {
+    padding: 0;
+    margin: 0.25rem;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+
+    a {
+      color: #ffffff;
     }
   }
 }
